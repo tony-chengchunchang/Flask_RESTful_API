@@ -5,7 +5,7 @@ from db import db
 from resources.campaign_resource import Campaign
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:boborock1986@127.0.0.1:3306/tonydb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://{user}:{passswd}@127.0.0.1:3306/{dbname}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 CORS(app)
 api = Api(app)
